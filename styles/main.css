@@ -6,6 +6,7 @@ body {
 
 h1 {
 	border-bottom: 1px solid #E2E2E2;
+	cursor: default;
 	font-family: 'Segoe UI', 'Trebuchet Ms', Tahoma, sans-serif;
 	font-size: 3em;
 	font-weight: normal;

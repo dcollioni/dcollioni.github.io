@@ -1,17 +1,28 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>dcollioni</title>
-		<link rel="stylesheet" type="text/css" href="styles/main.css">
-		<link id="favicon" rel="icon" type="image/png" href="images/favicon.png">
-	</head>
-	<body>
-		<h1>dcollioni</h1>
-		<nav>
-			<a href="https://github.com/dcollioni?tab=repositories" target="_blank">repos</a>
-			<a href="https://github.com/dcollioni" target="_blank">about</a>
-			<a href="mailto:dcollioni@gmail.com">contact</a>
-		</nav>
-	</body>
+﻿<!DOCTYPE html>
+<html ng-app="dcollioniApp">
+<head>
+    <meta charset="utf-8">
+    <!--<base href="/dcollioni/">-->
+    <title>dcollioni</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link id="favicon" rel="icon" type="image/png" href="images/favicon.png">
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body ng-controller="mainController">
+    <h1>dcollioni</h1>
+    <nav>
+        <!--<a href="https://github.com/dcollioni?tab=repositories" target="_blank">repos</a>
+        <a href="https://github.com/dcollioni" target="_blank">about</a>
+        <a href="mailto:dcollioni@gmail.com">contact</a>-->
+
+        <a href="home">home</a>
+        <a href="repos">repos</a>
+        <a href="about">about</a>
+        <a href="contact">contact</a>
+    </nav>
+    <div ng-view></div>
+</body>
 </html>
