@@ -9,6 +9,11 @@ dcollioniApp.config(function ($routeProvider, $locationProvider) {
             controller: 'mainController'
         })
 
+        .when('/home', {
+            templateUrl: 'pages/home.html',
+            controller: 'mainController'
+        })
+
         .when('/repos', {
             templateUrl: 'pages/home.html',
             controller: 'reposController'
@@ -28,7 +33,7 @@ dcollioniApp.config(function ($routeProvider, $locationProvider) {
             redirectTo: '/'
         });
 
-    //$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 });
 
 dcollioniApp.controller('mainController', function ($scope) {
