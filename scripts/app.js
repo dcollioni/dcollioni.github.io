@@ -43,6 +43,7 @@ dcollioniApp.controller('mainController', function ($scope) {
 dcollioniApp.controller('reposController', function ($scope, $http) {
     $http.get('https://api.github.com/users/dcollioni/repos').success(function (data) {
         $scope.repos = data;
+        console.log(data);
     });
 });
 
