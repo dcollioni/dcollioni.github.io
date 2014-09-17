@@ -1,10 +1,10 @@
 ﻿var dcollioniApp = angular.module('dcollioniApp', ['ngRoute']);
 
-// configure our routes
 dcollioniApp.config(function ($routeProvider, $locationProvider) {
+
     $routeProvider
 
-        .when('/home', {
+        .when('/', {
             templateUrl: 'pages/home.html',
             controller: 'mainController'
         })
@@ -22,9 +22,13 @@ dcollioniApp.config(function ($routeProvider, $locationProvider) {
         .when('/contact', {
             templateUrl: 'pages/home.html',
             controller: 'contactController'
+        })
+
+        .otherwise({
+            redirectTo: '/'
         });
 
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 });
 
 dcollioniApp.controller('mainController', function ($scope) {
