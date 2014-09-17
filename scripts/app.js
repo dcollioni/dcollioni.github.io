@@ -15,7 +15,7 @@ dcollioniApp.config(function ($routeProvider, $locationProvider) {
         })
 
         .when('/repos', {
-            templateUrl: 'pages/home.html',
+            templateUrl: 'pages/repos.html',
             controller: 'reposController'
         })
 
@@ -40,8 +40,10 @@ dcollioniApp.controller('mainController', function ($scope) {
     $scope.message = 'Everyone come and see how good I look!';
 });
 
-dcollioniApp.controller('reposController', function ($scope) {
-    $scope.message = 'My repos here...';
+dcollioniApp.controller('reposController', function ($scope, $http) {
+    $http.get('https://api.github.com/users/dcollioni/repos').success(function (data) {
+        $scope.repos = data;
+    });
 });
 
 dcollioniApp.controller('aboutController', function ($scope) {

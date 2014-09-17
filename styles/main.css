@@ -34,3 +34,32 @@ nav a:hover {
 nav a:active {
 	color: #004488;
 }
+
+ul.repos {
+    list-style-type: none;
+    margin: 20px auto;
+    text-align: center;
+    width: 50%;
+}
+
+ul.repos li {
+    background-color: #4488CC;
+    border: 1px solid #EEE;
+    border-radius: 6px;
+    color: #EEE;
+    cursor: default;
+    display: inline-block;
+    font-size: 12pt;
+    margin: 5px;
+    padding: 20px;
+    transition: all linear .2s;
+}
+
+ul.repos li:hover {
+    border-color: #68A;
+    box-shadow: #AAA 0px 0px 4px;
+}
+
+ul.repos li:active {
+    box-shadow: #888 0 0 10px inset;
+}
