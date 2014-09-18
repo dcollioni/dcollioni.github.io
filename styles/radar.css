@@ -1,0 +1,225 @@
+body {
+	background-color: #F2F2F2;
+	color: #444444;
+	font-family: 'Segoe UI Light', 'Trebuchet Ms', Tahoma, sans-serif;
+}
+
+h1 {
+	border-bottom: 1px solid #E2E2E2;
+	cursor: default;
+	font-family: 'Segoe UI', 'Trebuchet Ms', Tahoma, sans-serif;
+	font-size: 3em;
+	font-weight: normal;
+	margin: 0 auto;
+	text-align: center;
+	text-shadow: 0 0 4px #CCC;
+}
+
+#radar {
+    border: 2px solid #444;
+    border-radius: 400px;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    margin: 20px auto;
+    height: 800px;
+    width: 800px;
+}
+
+#radar .quadrant {
+    border: 1px solid #AAA;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+}
+
+#radar .quadrant.top {
+    border-top: none;
+    margin-top: 1px;
+    margin-bottom: -4px;
+}
+
+#radar .quadrant.bottom {
+    border-bottom: none;
+    margin-top: -1px;
+}
+
+#radar .quadrant.left {
+    border-left: none;
+    margin-left: 1px;
+    margin-right: -4px;
+}
+
+#radar .quadrant.right {
+    border-right: none;
+    margin-left: -2px;
+}
+
+#radar #techniques {
+    background-color: #DDF;
+    border-radius: 400px 0 0 0;
+}
+
+#radar #tools {
+    background-color: #FDD;
+    border-radius: 0 400px 0 0;
+}
+
+#radar #platforms {
+    background-color: #DFD;
+    border-radius: 0 0 0 400px;
+}
+
+#radar #languages {
+    background-color: #FFD;
+    border-radius: 0 0 400px 0;
+}
+
+#radar .quadrant .sector {
+    border: 1px solid #BBB;
+}
+
+#radar #techniques .hold {
+    border-radius: 400px 0 0 0;
+    height: 400px;
+    width: 400px;
+    float: right;
+    margin-top: -1px;
+    margin-right: -1px;
+}
+
+#radar #techniques .assess {
+    border-radius: 300px 0 0 0;
+    height: 300px;
+    width: 300px;
+    float: right;
+    margin-top: 98px;
+    margin-right: -1px;
+}
+
+#radar #techniques .trial {
+    border-radius: 200px 0 0 0;
+    height: 200px;
+    width: 200px;
+    float: right;
+    margin-top: 99px;
+    margin-right: -1px;
+}
+
+#radar #techniques .adopt {
+    border-radius: 100px 0 0 0;
+    height: 100px;
+    width: 100px;
+    float: right;
+    margin-top: 99px;
+    margin-right: -1px;
+}
+
+#radar #tools .hold {
+    border-radius: 0 400px 0 0;
+    height: 400px;
+    width: 400px;
+    float: left;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+#radar #tools .assess {
+    border-radius: 0 300px 0 0;
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin-top: 98px;
+    margin-left: -1px;
+}
+
+#radar #tools .trial {
+    border-radius: 0 200px 0 0;
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin-top: 99px;
+    margin-left: -1px;
+}
+
+#radar #tools .adopt {
+    border-radius: 0 100px 0 0;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-top: 99px;
+    margin-left: -1px;
+}
+
+#radar #platforms .hold {
+    border-radius: 0 0 0 400px;
+    height: 400px;
+    width: 400px;
+    float: left;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+#radar #platforms .assess {
+    border-radius: 0 0 0 300px;
+    height: 300px;
+    width: 300px;
+    float: right;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+#radar #platforms .trial {
+    border-radius: 0 0 0 200px;
+    height: 200px;
+    width: 200px;
+    float: right;
+    margin-top: -1px;
+    margin-right: -1px;
+}
+
+#radar #platforms .adopt {
+    border-radius: 0 0 0 100px;
+    height: 100px;
+    width: 100px;
+    float: right;
+    margin-top: -1px;
+    margin-right: -1px;
+}
+
+#radar #languages .hold {
+    border-radius: 0 0 400px 0;
+    height: 400px;
+    width: 400px;
+    float: left;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+#radar #languages .assess {
+    border-radius: 0 0 300px 0;
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+#radar #languages .trial {
+    border-radius: 0 0 200px 0;
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+#radar #languages .adopt {
+    border-radius: 0 0 100px 0;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-top: -1px;
+    margin-left: -1px;
+}
