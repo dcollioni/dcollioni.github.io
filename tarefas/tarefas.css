@@ -1,0 +1,121 @@
+body {
+	background-color: #eaeaea;
+	font-family: sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+fieldset {
+	background-color: #f2f2f2;
+	border: none;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 10px;
+	width: 50%;
+}
+
+fieldset div {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+input {
+	box-sizing: border-box;
+	box-shadow: 0 1px 1px #ccc inset;
+	border: none;
+	color: #666;
+	outline: none;
+	padding: 10px;
+	width: 80%;
+}
+
+button {
+	box-sizing: border-box;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	margin: 0 0 0 -5px;
+	outline: none;
+	padding: 10px;
+	width: 20%;
+	transition: all 1s;
+}
+button.adicionar {
+	background-color: #4b4;
+	box-shadow: 0 1px 1px #292;
+}
+button.adicionar:hover {
+	background-color: #3a3;
+	box-shadow: 0 1px 1px #070;
+}
+button.adicionar:active {
+	box-shadow: 0 1px 1px #070 inset;
+}
+
+button.remover {
+	background-color: #c44;
+	box-shadow: 0 1px 1px #a22;
+	float: right;
+	margin: 10px 0 0 0;
+}
+button.remover:hover {
+	background-color: #b33;
+	box-shadow: 0 1px 1px #800;
+}
+button.remover:active {
+	box-shadow: 0 1px 1px #800 inset;
+}
+
+ul#tarefas {
+	box-sizing: border-box;
+	background-color: #e8e8e8;
+	font-size: 10pt;
+	list-style-type: none;
+	margin: 10px 0 0 0;
+	padding: 10px;
+	width: 100%;
+}
+
+ul#tarefas li {
+	background-color: #88dfd0;
+	color: #666;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding: 10px;
+	transition: all .5s;
+}
+
+ul#tarefas li:last-child {
+	margin: 0;
+}
+
+ul#tarefas li.adicionado {
+	animation: fadein .5s;
+}
+
+ul#tarefas li.removido {
+	animation: fadeout .5s ease .5s;
+	background-color: #c44;
+	color: #fff;
+	text-decoration: line-through;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

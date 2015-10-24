@@ -27,11 +27,11 @@ dcollioniApp.config(function ($routeProvider, $locationProvider) {
         .when('/contact', {
             templateUrl: 'pages/home.html',
             controller: 'contactController'
-        })
-
-        .otherwise({
-            redirectTo: '/'
         });
+
+        // .otherwise({
+        //     redirectTo: '/'
+        // });
 
     $locationProvider.html5Mode(true);
 });
