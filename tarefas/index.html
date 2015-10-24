@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tarefas</title>
+	<link rel="stylesheet" href="tarefas.css">
+	<script src="tarefas.js"></script>
+</head>
+<body onload="carregarElementos();">
+	<h1>Tarefas</h1>
+	<fieldset>
+		<form action="#" onsubmit="return adicionarTarefa();">
+			<div>
+				<input type="text" id="descricao" placeholder="Descrição da tarefa" autofocus>
+				<button class="adicionar">Adicionar</button>
+			</div>
+		</form>
+		<ul id="tarefas">
+		</ul>
+		<button class="remover" onclick="removerTarefa();">Remover</button>
+	</fieldset>
+</body>
+</html>
