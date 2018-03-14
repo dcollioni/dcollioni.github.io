@@ -1,65 +1,85 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-	background-color: #F2F2F2;
-	color: #444444;
-	font-family: 'Segoe UI Light', 'Trebuchet Ms', Tahoma, sans-serif;
+	background-color: #eee;
+	color: #333333;
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+}
+
+@media (min-width: 768px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	body {
+		font-size: 20px;
+	}
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: center;
+	padding: 0 30px;
+	text-align: center;
 }
 
 h1 {
-	border-bottom: 1px solid #E2E2E2;
-	cursor: default;
-	font-family: 'Segoe UI', 'Trebuchet Ms', Tahoma, sans-serif;
-	font-size: 3em;
+	font-size: 2.6em;
+	margin-bottom: 30px;
+}
+
+h2 {
+	font-size: 1.3em;
 	font-weight: normal;
-	margin: 0 auto;
-	text-align: center;
-	text-shadow: 0 0 4px #CCC;
+	margin-bottom: 30px;
 }
 
-nav {
-	font-size: 2em;
-	text-align: center;
+a {
+	display: inline-block;
+	color: #333333;
+	margin: 0 10px;
 }
 
-nav a {
-	color: #4488CC;
-	margin: 0 15px;
-	text-decoration: none;
-	text-shadow: 0 0 2px #CCC;
+a > svg {
+	width: 30px;
+	height: 30px;
 }
 
-nav a:hover {
-	color: #2266AA;
+@media (min-width: 768px) {
+	a > svg {
+		width: 36px;
+		height: 36px;
+	}
 }
 
-nav a:active {
-	color: #004488;
+@media (min-width: 992px) {
+	a > svg {
+		width: 42px;
+		height: 42px;
+	}
 }
 
-ul.repos {
-    list-style-type: none;
-    margin: 20px auto;
-    text-align: center;
-    width: 50%;
-}
-
-ul.repos li {
-    background-color: #4488CC;
-    border: 1px solid #EEE;
-    border-radius: 6px;
-    color: #EEE;
-    cursor: default;
-    display: inline-block;
-    font-size: 12pt;
-    margin: 5px;
-    padding: 20px;
-    transition: all linear .2s;
-}
-
-ul.repos li:hover {
-    border-color: #68A;
-    box-shadow: #AAA 0px 0px 4px;
-}
-
-ul.repos li:active {
-    box-shadow: #888 0 0 10px inset;
+@media (min-width: 1200px) {
+	a > svg {
+		width: 45px;
+		height: 45px;
+	}
 }

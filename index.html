@@ -1,44 +1,44 @@
 ﻿<!DOCTYPE html>
-<html ng-app="dcollioniApp">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <!--<base href="/dcollioni/">-->
-    <title>dcollioni</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link id="favicon" rel="icon" type="image/png" href="images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="scripts/jquery-2.1.0.min.js"></script>
-    <script src="scripts/angular.min.js"></script>
-    <script src="scripts/angular-route.js"></script>
-    <script src="scripts/app.js"></script>
+  <link id="favicon" rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+  <title>Douglas Collioni | Full Stack Dev</title>
 </head>
-<body ng-controller="mainController">
-    <h1>dcollioni</h1>
+
+<body>
+  <main>
+    <h1>Hi, I'm Douglas!</h1>
+    <h2>Full Stack Dev | Coding Instructor</h2>
     <nav>
-        <!--<a href="https://github.com/dcollioni?tab=repositories" target="_blank">repos</a>
-        <a href="https://github.com/dcollioni" target="_blank">about</a>
-        <a href="mailto:dcollioni@gmail.com">contact</a>-->
-
-        <a href="home">home</a>
-        <a href="repos">repos</a>
-        <a href="about">about</a>
-        <a href="contact">contact</a>
+      <a href="https://github.com/dcollioni" title="Github">
+        <i data-feather="github"></i>
+      </a>
+      <a href="https://linkedin.com/in/dcollioni" title="LinkedIn">
+        <i data-feather="linkedin"></i>
+      </a>
+      <a href="mailto:dcollioni@gmail.com" title="Gmail">
+        <i data-feather="mail"></i>
+      </a>
+      <a href="https://twitter.com/dcollioni" title="Twitter">
+        <i data-feather="twitter"></i>
+      </a>
+      <a href="https://instagram.com/dougcollioni" title="Instagram">
+        <i data-feather="instagram"></i>
+      </a>
     </nav>
-    <div ng-view></div>
+  </main>
 
-    <!--<ul class="repos">
-        <li>
-            Android
-        </li>
-        <li>
-            BrMobi
-        </li>
-        <li>
-            dcollioni.github.io
-        </li>
-        <li>
-            InstantTranslator
-        </li>
-    </ul>-->
+  <script src="scripts/main.js"></script>
 </body>
+
 </html>
