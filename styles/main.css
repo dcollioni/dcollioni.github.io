@@ -52,6 +52,7 @@ h1 {
   margin-bottom: 30px;
   position: relative;
   width: max-content;
+  letter-spacing: -.02em;
 }
 
 h1::before, h1::after {
@@ -76,11 +77,12 @@ h1::after {
 }
 
 h2 {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 200;
   margin-bottom: 40px;
   position: relative;
   width: max-content;
+  letter-spacing: -.04em;
 }
 
 h2::before, h2::after {
