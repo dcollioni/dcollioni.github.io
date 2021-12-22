@@ -1,85 +1,162 @@
+:root {
+  --bg-color: #ffff44;
+  --text-color: #333333;
+
+  --typewriter-speed: 3s;
+}
+
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background-color: #ffff44;
-	color: #333333;
-	font-family: 'Roboto Slab', serif;
-	font-size: 14px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
-	body {
-		font-size: 16px;
-	}
+  body {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 992px) {
-	body {
-		font-size: 18px;
-	}
+  body {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1200px) {
-	body {
-		font-size: 20px;
-	}
-}
-
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-	margin: 0;
-	padding: 0;
+  body {
+    font-size: 20px;
+  }
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	justify-content: center;
-	padding: 0 30px;
-	text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  text-align: center;
 }
 
 h1 {
-	font-size: 2.6em;
-	margin-bottom: 30px;
+  font-size: 2.6em;
+  font-weight: 400;
+  margin-bottom: 30px;
+  position: relative;
+  width: max-content;
+}
+
+h1::before, h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriter-speed) steps(16) 1s forwards;
+}
+
+h1::after {
+  background: transparent;
+  width: .125em;
+  animation: typewriter var(--typewriter-speed) steps(16) 1s forwards,
+    blink .5s linear 12 alternate;
 }
 
 h2 {
-	font-size: 1.3em;
-	font-weight: normal;
-	margin-bottom: 30px;
+  font-size: 1.3em;
+  font-weight: 200;
+  margin-bottom: 40px;
+  position: relative;
+  width: max-content;
+}
+
+h2::before, h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h2::before {
+  background: var(--bg-color);
+  animation: typewriter calc(var(--typewriter-speed)*1.5) steps(50) 7s forwards;
+}
+
+h2::after {
+  background: transparent;
+  width: .125em;
+  animation: typewriter calc(var(--typewriter-speed)*1.5) steps(50) 7s forwards,
+    blink .5s linear 6s 16 alternate;
+}
+
+nav {
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: fadeIn .75s linear 14s forwards;
 }
 
 a {
-	display: inline-block;
-	color: #333333;
-	margin: 0 10px;
+  display: inline-block;
+  color: var(--text-color);
+  margin: 0 10px;
 }
 
 a > svg {
-	width: 30px;
-	height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 @media (min-width: 768px) {
-	a > svg {
-		width: 36px;
-		height: 36px;
-	}
+  a > svg {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 @media (min-width: 992px) {
-	a > svg {
-		width: 42px;
-		height: 42px;
-	}
+  a > svg {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 @media (min-width: 1200px) {
-	a > svg {
-		width: 45px;
-		height: 45px;
-	}
+  a > svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: var(--text-color);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
