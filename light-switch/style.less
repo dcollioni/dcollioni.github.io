@@ -1,0 +1,115 @@
+@light-bg-color: #eeeeee;
+@dark-bg-color: #333333;
+
+@light-wrapper-bg-color: #e0e0e0;
+@dark-wrapper-bg-color: #505050;
+
+@light-switch-bg-color: #fdfdfd;
+@dark-switch-bg-color: #202020;
+
+@light-switch-text-color: #999999;
+@dark-switch-light-text-color: #ffffff;
+@dark-switch-dark-text-color: #5ac6f1;
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: all 0.3s ease-in;
+
+  &.light {
+    background-color: @light-bg-color;
+
+    .wrapper {
+      background-color: @light-wrapper-bg-color;
+
+      .switch {
+        background-color: @light-switch-bg-color;
+        box-shadow: 4px 3px 9px rgb(0 0 0 / 60%);
+        transform: rotate3d(0, 1, 0, -15deg);
+
+        .light,
+        .dark {
+          color: @light-switch-text-color;
+          text-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+        }
+      }
+    }
+  }
+
+  &.dark {
+    background-color: @dark-bg-color;
+
+    .wrapper {
+      background-color: @dark-wrapper-bg-color;
+
+      .switch {
+        background-color: @dark-switch-bg-color;
+        box-shadow: -4px 3px 9px rgb(0 0 0);
+        transform: rotate3d(0, 1, 0, 15deg);
+
+        .light {
+          color: @dark-switch-light-text-color;
+          text-shadow: 0px 0px 1px @dark-switch-light-text-color;
+        }
+
+        .dark {
+          color: @dark-switch-dark-text-color;
+          text-shadow: 0px 0px 15px @dark-switch-dark-text-color;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  perspective: 400px;
+  transition: all 0.3s ease-in;
+
+  .switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 120px;
+    width: 300px;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: all 0.3s ease-in;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      user-select: none;
+    }
+  }
+}
+
+@keyframes switcher {
+  0% {
+    transform: rotate3d(0, 1, 0, -15deg);
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 15deg);
+    box-shadow: -2px 2px 6px rgb(0 0 0 / 60%);
+  }
+}
